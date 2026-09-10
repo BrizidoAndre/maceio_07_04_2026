@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype - Dialogue Engine</title>
+  <link rel="stylesheet" href="prototype.css">
+</head>
+
+<body>
+<div class="game-container">
+  <header class="game-header">
+    <div>
+      <h1>Dialogue Engine</h1>
+      <p style="color: #b3c5d7; font-size: 16px; margin-top: 15px; line-height: 1.8;">
+        Interactive prototype to test dialogue scenarios with various game characters.
+      </p>
+    </div>
+    <div class="inventory">
+      <h3>📦 Inventory</h3>
+      <div id="inventory-items" class="inventory-items">
+      </div>
+    </div>
+  </header>
+
+  <main class="game-world">
+    <div class="characters-section">
+      <h2>Available Characters</h2>
+      <div class="characters-grid">
+        <div class="character" data-dialog-id="dialog-1">
+          <div class="character-image halite">
+            <div class="character-placeholder">🔭</div>
+          </div>
+          <h3>Halite</h3>
+          <p>Guardian of the cosmic observation tower. Observes stars and spatial phenomena from his strategic position.</p>
+        </div>
+
+        <div class="character" data-dialog-id="dialog-2">
+          <div class="character-image guard">
+            <div class="character-placeholder">🛡️</div>
+          </div>
+          <h3>Guard</h3>
+          <p>Ruthless sentinel who controls access to restricted areas. Can be corrupted with the right arguments.</p>
+        </div>
+
+        <div class="character" data-dialog-id="dialog-3">
+          <div class="character-image mother">
+            <div class="character-placeholder">👩</div>
+          </div>
+          <h3>Mom</h3>
+          <p>Your benevolent mother who appreciates politeness and can help you in your spatial adventures.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog-section" id="dialog-section" style="display: none;">
+      <div class="dialog-box">
+        <div class="dialog-header">
+          <h3 id="dialog-protagonist">Protagonist</h3>
+          <button id="close-dialog" class="close-btn">✕</button>
+        </div>
+        <div class="dialog-content">
+          <p id="dialog-text">Dialogue text...</p>
+          <div id="dialog-answers" class="dialog-answers">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="debug-section">
+    <h3>🔧 Debug Information</h3>
+    <div id="debug-info">
+      <p>Click on a character to start a dialogue</p>
+    </div>
+  </div>
+</div>
+
+<script src="dialog-interface.js"></script>
+<script src="prototype.js"></script>
+</body>
+
+</html>
